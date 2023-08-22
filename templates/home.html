@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Movies Review</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='spam-favicon.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+    	<div class="container">
+    		<h2 class='container-heading'><span>CLASSIFIER</span> </h2>
+            <div class='description'>
+    			<p>Ratings on KGF2</p>
+    		</div>
+    	</div>
+        
+    	<div class="ml-container">
+    		<form action="{{ url_for('predict') }}" method="POST">
+        		<textarea class='message-box' name="message" rows="15" cols="75" placeholder="Enter Your Message Here... (ex: This is the worst movie, i have ever seen in my life  OR  This is the wonderful movie, i have ever seen in my life)"></textarea><br/>
+        		<input type="submit" class="my-cta-button" value="Predict">
+        	</form>
+    	</div>
+
+        <div class='footer'>
+            <div class="contact">
+                <a target="_blank" href="https://github.com/DarkLoRD-007/Movie_Review-using-machine-learning..."><i class="fab fa-github fa-lg contact-icon"></i></a>
+                <a target="_blank" href="https://www.linkedin.com/in/subhadip-sau-2b8901195/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+            </div> 
+            <p class='footer-description'>Global Institute of Science and Technology</p>
+        </div>
+
+    </body>
+</html>
